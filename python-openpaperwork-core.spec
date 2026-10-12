@@ -12,6 +12,7 @@ Source0:	https://pypi.org/packages/source/o/%{module}/%{module}-%{version}.tar.g
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(psutil)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildArch:	noarch
 
 %description
@@ -25,7 +26,7 @@ provide some basic plugins that may be used in any kind of application.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n openpaperwork_core-2.2.5
+%autosetup -p1 -n openpaperwork_core-%{version}
 
 %build
 %py_build
